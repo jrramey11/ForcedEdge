@@ -9,6 +9,23 @@
 /* Begin PBXBuildFile section */
 		814A49DA172D9FBB009D9CDF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 814A49D9172D9FBB009D9CDF /* main.cpp */; };
 		814A49DC172D9FBB009D9CDF /* Force_Edge.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 814A49DB172D9FBB009D9CDF /* Force_Edge.1 */; };
+		814A49F2172DBAB0009D9CDF /* libopencv_stitching.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49E2172DBAB0009D9CDF /* libopencv_stitching.a */; };
+		814A49F3172DBAB0009D9CDF /* libopencv_videostab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49E3172DBAB0009D9CDF /* libopencv_videostab.a */; };
+		814A49F4172DBAB0009D9CDF /* libopencv_contrib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49E4172DBAB0009D9CDF /* libopencv_contrib.a */; };
+		814A49F5172DBAB0009D9CDF /* libopencv_legacy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49E5172DBAB0009D9CDF /* libopencv_legacy.a */; };
+		814A49F6172DBAB0009D9CDF /* libopencv_nonfree.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49E6172DBAB0009D9CDF /* libopencv_nonfree.a */; };
+		814A49F7172DBAB0009D9CDF /* libopencv_objdetect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49E7172DBAB0009D9CDF /* libopencv_objdetect.a */; };
+		814A49F8172DBAB0009D9CDF /* libopencv_photo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49E8172DBAB0009D9CDF /* libopencv_photo.a */; };
+		814A49F9172DBAB0009D9CDF /* libopencv_softcascade.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49E9172DBAB0009D9CDF /* libopencv_softcascade.a */; };
+		814A49FA172DBAB0009D9CDF /* libopencv_video.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49EA172DBAB0009D9CDF /* libopencv_video.a */; };
+		814A49FB172DBAB0009D9CDF /* libopencv_calib3d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49EB172DBAB0009D9CDF /* libopencv_calib3d.a */; };
+		814A49FC172DBAB0009D9CDF /* libopencv_features2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49EC172DBAB0009D9CDF /* libopencv_features2d.a */; };
+		814A49FD172DBAB0009D9CDF /* libopencv_flann.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49ED172DBAB0009D9CDF /* libopencv_flann.a */; };
+		814A49FE172DBAB0009D9CDF /* libopencv_highgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49EE172DBAB0009D9CDF /* libopencv_highgui.a */; };
+		814A49FF172DBAB0009D9CDF /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49EF172DBAB0009D9CDF /* libopencv_imgproc.a */; };
+		814A4A00172DBAB0009D9CDF /* libopencv_ml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49F0172DBAB0009D9CDF /* libopencv_ml.a */; };
+		814A4A01172DBAB0009D9CDF /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49F1172DBAB0009D9CDF /* libopencv_core.a */; };
+		814A4A04172DBB77009D9CDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A4A03172DBB77009D9CDF /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +45,23 @@
 		814A49D6172D9FBB009D9CDF /* Force-Edge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Force-Edge"; sourceTree = BUILT_PRODUCTS_DIR; };
 		814A49D9172D9FBB009D9CDF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		814A49DB172D9FBB009D9CDF /* Force_Edge.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Force_Edge.1; sourceTree = "<group>"; };
+		814A49E2172DBAB0009D9CDF /* libopencv_stitching.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_stitching.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/stitching/UninstalledProducts/libopencv_stitching.a"; sourceTree = "<group>"; };
+		814A49E3172DBAB0009D9CDF /* libopencv_videostab.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_videostab.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/videostab/UninstalledProducts/libopencv_videostab.a"; sourceTree = "<group>"; };
+		814A49E4172DBAB0009D9CDF /* libopencv_contrib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_contrib.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/contrib/UninstalledProducts/libopencv_contrib.a"; sourceTree = "<group>"; };
+		814A49E5172DBAB0009D9CDF /* libopencv_legacy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_legacy.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/legacy/UninstalledProducts/libopencv_legacy.a"; sourceTree = "<group>"; };
+		814A49E6172DBAB0009D9CDF /* libopencv_nonfree.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_nonfree.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/nonfree/UninstalledProducts/libopencv_nonfree.a"; sourceTree = "<group>"; };
+		814A49E7172DBAB0009D9CDF /* libopencv_objdetect.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_objdetect.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/objdetect/UninstalledProducts/libopencv_objdetect.a"; sourceTree = "<group>"; };
+		814A49E8172DBAB0009D9CDF /* libopencv_photo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_photo.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/photo/UninstalledProducts/libopencv_photo.a"; sourceTree = "<group>"; };
+		814A49E9172DBAB0009D9CDF /* libopencv_softcascade.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_softcascade.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/softcascade/UninstalledProducts/libopencv_softcascade.a"; sourceTree = "<group>"; };
+		814A49EA172DBAB0009D9CDF /* libopencv_video.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_video.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/video/UninstalledProducts/libopencv_video.a"; sourceTree = "<group>"; };
+		814A49EB172DBAB0009D9CDF /* libopencv_calib3d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_calib3d.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/calib3d/UninstalledProducts/libopencv_calib3d.a"; sourceTree = "<group>"; };
+		814A49EC172DBAB0009D9CDF /* libopencv_features2d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_features2d.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/features2d/UninstalledProducts/libopencv_features2d.a"; sourceTree = "<group>"; };
+		814A49ED172DBAB0009D9CDF /* libopencv_flann.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_flann.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/flann/UninstalledProducts/libopencv_flann.a"; sourceTree = "<group>"; };
+		814A49EE172DBAB0009D9CDF /* libopencv_highgui.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_highgui.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/highgui/UninstalledProducts/libopencv_highgui.a"; sourceTree = "<group>"; };
+		814A49EF172DBAB0009D9CDF /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/imgproc/UninstalledProducts/libopencv_imgproc.a"; sourceTree = "<group>"; };
+		814A49F0172DBAB0009D9CDF /* libopencv_ml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_ml.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/ml/UninstalledProducts/libopencv_ml.a"; sourceTree = "<group>"; };
+		814A49F1172DBAB0009D9CDF /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/core/UninstalledProducts/libopencv_core.a"; sourceTree = "<group>"; };
+		814A4A03172DBB77009D9CDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +69,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814A4A04172DBB77009D9CDF /* CoreGraphics.framework in Frameworks */,
+				814A49F2172DBAB0009D9CDF /* libopencv_stitching.a in Frameworks */,
+				814A49F3172DBAB0009D9CDF /* libopencv_videostab.a in Frameworks */,
+				814A49F4172DBAB0009D9CDF /* libopencv_contrib.a in Frameworks */,
+				814A49F5172DBAB0009D9CDF /* libopencv_legacy.a in Frameworks */,
+				814A49F6172DBAB0009D9CDF /* libopencv_nonfree.a in Frameworks */,
+				814A49F7172DBAB0009D9CDF /* libopencv_objdetect.a in Frameworks */,
+				814A49F8172DBAB0009D9CDF /* libopencv_photo.a in Frameworks */,
+				814A49F9172DBAB0009D9CDF /* libopencv_softcascade.a in Frameworks */,
+				814A49FA172DBAB0009D9CDF /* libopencv_video.a in Frameworks */,
+				814A49FB172DBAB0009D9CDF /* libopencv_calib3d.a in Frameworks */,
+				814A49FC172DBAB0009D9CDF /* libopencv_features2d.a in Frameworks */,
+				814A49FD172DBAB0009D9CDF /* libopencv_flann.a in Frameworks */,
+				814A49FE172DBAB0009D9CDF /* libopencv_highgui.a in Frameworks */,
+				814A49FF172DBAB0009D9CDF /* libopencv_imgproc.a in Frameworks */,
+				814A4A00172DBAB0009D9CDF /* libopencv_ml.a in Frameworks */,
+				814A4A01172DBAB0009D9CDF /* libopencv_core.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +95,8 @@
 		814A49CD172D9FBA009D9CDF = {
 			isa = PBXGroup;
 			children = (
+				814A4A03172DBB77009D9CDF /* CoreGraphics.framework */,
+				814A4A02172DBB5F009D9CDF /* OpenCv */,
 				814A49D8172D9FBB009D9CDF /* Force-Edge */,
 				814A49D7172D9FBB009D9CDF /* Products */,
 			);
@@ -64,6 +117,29 @@
 				814A49DB172D9FBB009D9CDF /* Force_Edge.1 */,
 			);
 			path = "Force-Edge";
+			sourceTree = "<group>";
+		};
+		814A4A02172DBB5F009D9CDF /* OpenCv */ = {
+			isa = PBXGroup;
+			children = (
+				814A49E2172DBAB0009D9CDF /* libopencv_stitching.a */,
+				814A49E3172DBAB0009D9CDF /* libopencv_videostab.a */,
+				814A49E4172DBAB0009D9CDF /* libopencv_contrib.a */,
+				814A49E5172DBAB0009D9CDF /* libopencv_legacy.a */,
+				814A49E6172DBAB0009D9CDF /* libopencv_nonfree.a */,
+				814A49E7172DBAB0009D9CDF /* libopencv_objdetect.a */,
+				814A49E8172DBAB0009D9CDF /* libopencv_photo.a */,
+				814A49E9172DBAB0009D9CDF /* libopencv_softcascade.a */,
+				814A49EA172DBAB0009D9CDF /* libopencv_video.a */,
+				814A49EB172DBAB0009D9CDF /* libopencv_calib3d.a */,
+				814A49EC172DBAB0009D9CDF /* libopencv_features2d.a */,
+				814A49ED172DBAB0009D9CDF /* libopencv_flann.a */,
+				814A49EE172DBAB0009D9CDF /* libopencv_highgui.a */,
+				814A49EF172DBAB0009D9CDF /* libopencv_imgproc.a */,
+				814A49F0172DBAB0009D9CDF /* libopencv_ml.a */,
+				814A49F1172DBAB0009D9CDF /* libopencv_core.a */,
+			);
+			name = OpenCv;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +262,27 @@
 		814A49E0172D9FBB009D9CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = /opt/local/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/stitching/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/videostab/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/contrib/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/legacy/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/nonfree/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/objdetect/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/photo/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/softcascade/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/video/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/calib3d/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/features2d/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/flann/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/highgui/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/imgproc/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/ml/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/core/UninstalledProducts\"",
+					/opt/local/lib/,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -193,6 +290,26 @@
 		814A49E1172D9FBB009D9CDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = /opt/local/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/stitching/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/videostab/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/contrib/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/legacy/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/nonfree/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/objdetect/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/photo/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/softcascade/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/video/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/calib3d/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/features2d/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/flann/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/highgui/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/imgproc/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/ml/UninstalledProducts\"",
+					"\"$(SRCROOT)/../../../ios/build/iPhoneSimulator-i386/modules/core/UninstalledProducts\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -216,6 +333,7 @@
 				814A49E1172D9FBB009D9CDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
