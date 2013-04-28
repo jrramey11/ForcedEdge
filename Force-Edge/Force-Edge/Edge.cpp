@@ -10,16 +10,31 @@
 
 
 edge::edge(cv::Point2f start_point, cv::Point2f end_point, double k, int n ){
+    
     start = start_point;
     end = end_point;
     K = k;
     
+    std::cout<< start << " "<< end << std::endl;
 
     
-    cv::Point2f diff = start-end;
-    diff = diff/cv::Point2f(2,2);
+    //Create the initial intermediate points
+    cv::Point2f diff = end-start;
+    diff = cv::Point2f(diff.x/n, diff.y/n);
+    cv::Point2f next =start + diff;
+    for(int i=0; i<n-1; i++){
+        std::cout << next << std::endl;
+        points.push_back(next);
+        next+=diff;
+    }
     
     
     
-    
+}
+cv::Point2f edge::operator() (int n){
+    return points[n];
+}
+
+void edge::set(int n, cv::Point2f p){
+    points[n]=p;
 }
