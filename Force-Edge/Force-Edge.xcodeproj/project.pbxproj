@@ -26,6 +26,7 @@
 		814A4A01172DBAB0009D9CDF /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 814A49F1172DBAB0009D9CDF /* libopencv_core.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B56D394C172DBC650087EC40 /* libopencv_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D394B172DBC650087EC40 /* libopencv_core.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B56D394E172DBC6E0087EC40 /* libopencv_highgui.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D394D172DBC6E0087EC40 /* libopencv_highgui.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B56D3954172DBF5E0087EC40 /* Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56D3952172DBF5E0087EC40 /* Edge.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,8 @@
 		814A49F1172DBAB0009D9CDF /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = "../../../ios/build/iPhoneSimulator-i386/modules/core/UninstalledProducts/libopencv_core.a"; sourceTree = "<group>"; };
 		B56D394B172DBC650087EC40 /* libopencv_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.dylib; path = /usr/local/lib/libopencv_core.dylib; sourceTree = "<absolute>"; };
 		B56D394D172DBC6E0087EC40 /* libopencv_highgui.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.dylib; path = /usr/local/lib/libopencv_highgui.dylib; sourceTree = "<absolute>"; };
+		B56D3952172DBF5E0087EC40 /* Edge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Edge.cpp; sourceTree = "<group>"; };
+		B56D3953172DBF5E0087EC40 /* Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 			children = (
 				814A49D9172D9FBB009D9CDF /* main.cpp */,
 				814A49DB172D9FBB009D9CDF /* Force_Edge.1 */,
+				B56D3952172DBF5E0087EC40 /* Edge.cpp */,
+				B56D3953172DBF5E0087EC40 /* Edge.h */,
 			);
 			path = "Force-Edge";
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				814A49DA172D9FBB009D9CDF /* main.cpp in Sources */,
+				B56D3954172DBF5E0087EC40 /* Edge.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

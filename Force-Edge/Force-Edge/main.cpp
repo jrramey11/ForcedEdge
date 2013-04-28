@@ -14,6 +14,9 @@ int main(int argc, const char * argv[])
 {
 
     // insert code here...
+    
+    cv::Mat m(30,30,CV_64FC1);
+    
     std::cout << "Hello, World!\n";
     return 0;
 }
