@@ -17,7 +17,7 @@ edge::edge(cv::Point2f start_point, cv::Point2f end_point, double k, int n ){
 
     
     cv::Point2f diff = start-end;
-    diff = diff/cv::Point2f(2,2);
+    //diff = diff/cv::Point2f(2,2);
     
     
     
