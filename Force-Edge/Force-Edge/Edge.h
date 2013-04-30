@@ -15,14 +15,15 @@
 class edge {
 private:
     double K;
-    cv::Point2f start;
-    cv::Point2f end;
-    std::vector<cv::Point2f> points;
+    cv::Point2d start;
+    cv::Point2d end;
+    std::vector<cv::Point2d> points;
 public:
-    edge(cv::Point2f, cv::Point2f, double K, int N);
-    std::vector<cv::Point2f> get_poly_line();
-    cv::Point2f operator()(int n);
-    void set(int , cv::Point2f);
+    edge(cv::Point2d, cv::Point2d, double K, int N);
+    std::vector<cv::Point2d> get_poly_line();
+    cv::Point2d operator()(int n);
+    
+    void set(int , cv::Point2d);
 };
 
 
