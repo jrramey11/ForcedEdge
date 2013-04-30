@@ -7,7 +7,7 @@
 //
 
 #include "Edge.h"
-
+#include <cassert>
 
 edge::edge(cv::Point2d start_point, cv::Point2d end_point, double k, int n ){
     
@@ -15,7 +15,10 @@ edge::edge(cv::Point2d start_point, cv::Point2d end_point, double k, int n ){
     end = end_point;
     K = k;
     
-
+    assert(start.x >= 0);
+    assert(start.y >= 0);
+    assert(end.x >= 0);
+    assert(end.y >= 0);
 
     
     //Create the initial intermediate points
@@ -24,6 +27,8 @@ edge::edge(cv::Point2d start_point, cv::Point2d end_point, double k, int n ){
     cv::Point2d next =start + diff;
     for(int i=0; i<n-1; i++){
         points.push_back(next);
+        assert(next.x >=0);
+        assert(next.y>=0);
         next+=diff;
     }
     
@@ -41,6 +46,11 @@ std::vector<cv::Point2d> edge::get_poly_line(){
     ret_vec.push_back(start);
     ret_vec.insert(ret_vec.end(), points.begin(), points.end());
     ret_vec.push_back(end);
+    for(std::vector<cv::Point2d>::iterator i = ret_vec.begin(); i!=ret_vec.end(); i++ ){
+//        std::cout << *(i) << std::endl;
+        assert(i->x >= 0);
+        assert(i->y >= 0);
+    }
     return ret_vec;
 }
 

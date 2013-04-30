@@ -15,7 +15,7 @@
 
 
 const std::string filename = "/Users/jzeimen/current_semester/Scientific Vizualization/ForcedEdge/edges.txt";
-
+const int SCALE_FACTOR = 3;
 
 std::vector<edge> get_edges(std::string file_name, double k, int n){
     std::ifstream file;
@@ -28,14 +28,14 @@ std::vector<edge> get_edges(std::string file_name, double k, int n){
     
     while(!file.eof()){
         double a_lat, b_lat, a_lon, b_lon;
-        file >> a_lat;
-        a_lat+=180;
         file >> a_lon;
-        a_lon+=90;
+        file >> a_lat;
+        file >> b_lon;
         file >> b_lat;
-        b_lat+=180;
-        file>> b_lon;
-        b_lon+=90;
+        a_lat =(a_lat+90)*SCALE_FACTOR;
+        a_lon =(180-a_lon+90)*SCALE_FACTOR;
+        b_lat =(b_lat+90)*SCALE_FACTOR;
+        b_lon =(180-b_lon+90)*SCALE_FACTOR;
 
         edge e(cv::Point2d(a_lat, a_lon), cv::Point2d(b_lat, b_lon), k, n);
         edges.push_back(e);
@@ -46,12 +46,33 @@ std::vector<edge> get_edges(std::string file_name, double k, int n){
     return edges;
 }
 
+std::vector<std::vector<cv::Point> > d_to_i(std::vector<std::vector<cv::Point2d> > pts ){
+    std::vector<std::vector<cv::Point> > ret_vec;
+    for(std::vector<std::vector<cv::Point2d> >::iterator i = pts.begin(); i!= pts.end(); i++){
+        std::vector<cv::Point> point_list;
+        for(std::vector<cv::Point2d>::iterator j = i->begin(); j!=i->end(); j++){
+            point_list.push_back(cv::Point(j->x+0.5,j->y+0.5));
+        }
+        ret_vec.push_back(point_list);
+    }
+    
+    return ret_vec;
+    
+}
 
 void draw_and_show_edges(std::vector<edge> edges){
     
-    cv::Mat m = cv::Mat::ones(1000,1000,CV_8UC3);
-    cv::rectangle(m, cv::Point(100,100), cv::Point(200,200), cv::Scalar( 0, 0, 255 ));
+    cv::Mat m = cv::Mat::zeros(180*SCALE_FACTOR,360*SCALE_FACTOR,CV_16UC3);
+
     
+    std::vector<std::vector<cv::Point2d> > lines;
+    for(std::vector<edge>::iterator i = edges.begin(); i!=edges.end(); i++){
+        lines.push_back(i->get_poly_line());
+        
+    }
+    
+    cv::polylines(m, d_to_i(lines), true, cv::Scalar(0xFFFF,0,0,0x00), 2, CV_AA);
+     
     cv::namedWindow("H");
     cv::imshow("H", m);
     
@@ -66,8 +87,9 @@ void bundle_iteration(std::vector<edge> edges){
 
 int main(int argc, const char * argv[])
 {
-    get_edges(filename, .5, 4);
     
+    std::vector<edge> edges = get_edges(filename, .5, 4);
+    draw_and_show_edges(edges);
     
     
     return 0;
