@@ -35,6 +35,14 @@ cv::Point2f edge::operator() (int n){
     return points[n];
 }
 
+std::vector<cv::Point2f> edge::get_poly_line(){
+    std::vector<cv::Point2f> ret_vec;
+    ret_vec.push_back(start);
+    ret_vec.insert(ret_vec.end(), points.begin(), points.end());
+    ret_vec.push_back(end);
+    return ret_vec;
+}
+
 void edge::set(int n, cv::Point2f p){
     points[n]=p;
 }

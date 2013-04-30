@@ -20,6 +20,7 @@ private:
     std::vector<cv::Point2f> points;
 public:
     edge(cv::Point2f, cv::Point2f, double K, int N);
+    std::vector<cv::Point2f> get_poly_line();
     cv::Point2f operator()(int n);
     void set(int , cv::Point2f);
 };
