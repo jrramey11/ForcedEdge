@@ -15,7 +15,7 @@
 
 
 const std::string filename = "/Users/jzeimen/current_semester/Scientific Vizualization/ForcedEdge/edges.txt";
-const int SCALE_FACTOR = 3;
+const int SCALE_FACTOR = 4;
 
 std::vector<edge> get_edges(std::string file_name, double k, int n){
     std::ifstream file;
@@ -62,20 +62,24 @@ std::vector<std::vector<cv::Point> > d_to_i(std::vector<std::vector<cv::Point2d>
 
 void draw_and_show_edges(std::vector<edge> edges){
     
-    cv::Mat m = cv::Mat::zeros(180*SCALE_FACTOR,360*SCALE_FACTOR,CV_16UC3);
+    cv::Mat accumulation = cv::Mat::zeros(180*SCALE_FACTOR,360*SCALE_FACTOR,CV_16UC1);
 
     
     std::vector<std::vector<cv::Point2d> > lines;
+    int count =0;
     for(std::vector<edge>::iterator i = edges.begin(); i!=edges.end(); i++){
+        cv::Mat m = cv::Mat::zeros(180*SCALE_FACTOR,360*SCALE_FACTOR,CV_16UC1);
         lines.push_back(i->get_poly_line());
-        
+        cv::polylines(m, d_to_i(lines), false, cv::Scalar(0x00FF), 1, CV_AA);
+        accumulation+=m;
+        lines.clear();
+        if(!(count++%300)) std::cout << (double)count*100/ edges.size()<< std::endl;
     }
     
-    cv::polylines(m, d_to_i(lines), true, cv::Scalar(0xFFFF,0,0,0x00), 2, CV_AA);
-     
-    cv::namedWindow("H");
-    cv::imshow("H", m);
     
+    cv::imwrite("/Users/jzeimen/Desktop/img.png", accumulation);
+    cv::namedWindow("H");
+    cv::imshow("H", accumulation);
     cv::waitKey(0);
 }
 
