@@ -73,7 +73,7 @@ void draw_and_show_edges(std::vector<edge> edges){
         cv::polylines(m, d_to_i(lines), false, cv::Scalar(0x00FF), 1, CV_AA);
         accumulation+=m;
         lines.clear();
-        if(!(count++%300)) std::cout << (double)count*100/ edges.size()<< std::endl;
+        if(!(count++%300)) std::cout << (double)count*100/ edges.size()<< "%" << std::endl;
     }
     
     
@@ -84,15 +84,32 @@ void draw_and_show_edges(std::vector<edge> edges){
 }
 
 
-void bundle_iteration(std::vector<edge> edges){
+std::vector<edge> bundle_iteration(std::vector<edge> edges, int n){
+    std::vector<edge> copy(edges);
     
+    //For every edge
+    for(int i =0; i<edges.size(); i++){
+        //For every internal point in the edge
+        for(int j = 0; j<n; j++){
+            //Todo: calculate forces pulled by adjacent pts
+            
+            //Sum the forces acted on by all other edges
+            for(int k=0; k<edges.size(); k++){
+                
+            }
+            
+            //Adjust edge location, store in copy
+            
+        }
+    }
+    return copy;
 }
 
 
 int main(int argc, const char * argv[])
 {
     
-    std::vector<edge> edges = get_edges(filename, .5, 4);
+    std::vector<edge> edges = get_edges(filename, .5, 40);
     draw_and_show_edges(edges);
     
     

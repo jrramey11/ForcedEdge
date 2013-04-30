@@ -13,7 +13,7 @@ edge::edge(cv::Point2d start_point, cv::Point2d end_point, double k, int n ){
     
     start = start_point;
     end = end_point;
-    K = k;
+    Kp = k/(cv::norm(start-end)*n);
     
     assert(start.x >= 0);
     assert(start.y >= 0);
@@ -32,11 +32,8 @@ edge::edge(cv::Point2d start_point, cv::Point2d end_point, double k, int n ){
         next+=diff;
     }
     
-
-    
-    
-    
 }
+
 cv::Point2d edge::operator() (int n){
     return points[n];
 }
@@ -57,3 +54,27 @@ std::vector<cv::Point2d> edge::get_poly_line(){
 void edge::set(int n, cv::Point2d p){
     points[n]=p;
 }
+
+cv::Point2d edge::get_force_at(int n){
+    cv::Point2d left, right;
+    if(n==0){
+        left = start;
+        right = points[n+1];
+    } else if(n==points.size()-1){
+        left = points[n-1];
+        right = end;
+    } else {
+        left = points[n-1];
+        right = points[n+1];
+    }
+    cv::Point2d left_force =left-points[n];
+    cv::Point2d right_force =right-points[n];
+//    double left_length = cv::norm(left_force);
+//    double right_length = cv::norm(right_force);
+    left_force *= Kp;
+    right_force *= Kp;
+    
+    return left_force+right_force;
+}
+
+
