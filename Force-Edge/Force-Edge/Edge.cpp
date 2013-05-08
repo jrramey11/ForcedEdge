@@ -15,10 +15,10 @@ edge::edge(cv::Point2d start_point, cv::Point2d end_point, double k, int n ){
     end = end_point;
     Kp = k/(cv::norm(start-end)*n);
     
-    assert(start.x >= 0);
-    assert(start.y >= 0);
-    assert(end.x >= 0);
-    assert(end.y >= 0);
+    assert(start.x > 0);
+    assert(start.y > 0);
+    assert(end.x > 0);
+    assert(end.y > 0);
 
     
     //Create the initial intermediate points
@@ -27,8 +27,8 @@ edge::edge(cv::Point2d start_point, cv::Point2d end_point, double k, int n ){
     cv::Point2d next =start + diff;
     for(int i=0; i<n-1; i++){
         points.push_back(next);
-        assert(next.x >=0);
-        assert(next.y>=0);
+        assert(next.x >0);
+        assert(next.y>0);
         next+=diff;
     }
     

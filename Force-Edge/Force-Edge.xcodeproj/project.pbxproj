@@ -208,15 +208,18 @@
 		814A49E0172D9FBB009D9CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_OPENMP_SUPPORT = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					/opt/local/include/opencv,
 					/opt/local/include,
 				);
 				"HEADER_SEARCH_PATHS[arch=*]" = /opt/local/include/;
+				ICC_LANG_OPENMP = parallel;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/local/lib/,
+					/usr/local/lib/,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = "";
@@ -226,15 +229,18 @@
 		814A49E1172D9FBB009D9CDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_OPENMP_SUPPORT = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					/opt/local/include/opencv,
 					/opt/local/include,
 				);
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				ICC_LANG_OPENMP = parallel;
 				LIBRARY_SEARCH_PATHS = (
 					/opt/local/lib/,
 					"$(inherited)",
+					/usr/local/lib/,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = "";

@@ -10,7 +10,7 @@
 #define __Force_Edge__Edge__
 
 #include <iostream>
-#include <opencv2/opencv.hpp>
+#include <opencv/cv.h>
 
 class edge {
 private:
@@ -24,6 +24,8 @@ public:
     cv::Point2d operator()(int n);
     cv::Point2d get_force_at(int n);
     void set(int , cv::Point2d);
+    cv::Point2d get_start(){return start;};
+    cv::Point2d get_end(){return end;};
 };
 
 
