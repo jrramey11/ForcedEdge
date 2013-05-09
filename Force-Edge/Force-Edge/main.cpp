@@ -17,7 +17,8 @@
 
 
 //const std::string filename = "/Users/jzeimen/current_semester/Scientific Vizualization/ForcedEdge/edges.txt";
-const std::string filename = "/home/jzeimen/Documents/school/College/Spring2013/Scientific Vizualization/ForcedEdge/edges.txt";
+//const std::string filename = "/home/jzeimen/Documents/school/College/Spring2013/Scientific Vizualization/ForcedEdge/edges.txt";
+const std::string filename = "/Users/jrramey11/Desktop/ForcedEdge/edges.txt";
 const int SCALE_FACTOR = 32;
 
 
@@ -243,6 +244,7 @@ int main(int argc, const char * argv[])
 
     
     for(double i = 2; i<100; i = i+5){
+        double i = 2;
         std::cout << "Reading file " <<std::endl;
         std::vector<edge> edges = get_edges(filename, i, 10);
         std::vector<edge> copy = get_edges(filename, i, 10);
@@ -261,7 +263,7 @@ int main(int argc, const char * argv[])
         
         std::stringstream file_name;
 
-        file_name << "/home/jzeimen/Desktop/" << i << ".png";
+        file_name << "/Users/jrramey11/Desktop/ForcedEdge/" << i << ".png";
         std::cout << file_name.str() << std::endl;
         draw_and_show_edges(edges,file_name.str());
     }
@@ -285,7 +287,7 @@ int main(int argc, const char * argv[])
         
         std::stringstream file_name;
         
-        file_name << "/home/jzeimen/Desktop/" << i << ".png";
+        file_name << "/Users/jrramey11/Desktop/ForcedEdge/" << i << ".png";
         std::cout << file_name.str() << std::endl;
         draw_and_show_edges(edges,file_name.str());
     }
