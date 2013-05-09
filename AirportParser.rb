@@ -62,6 +62,7 @@ while line = input.gets
           if airports.has_key?(source) and airports.has_key?(dest)
                   output.puts "#{airports[source].join(" ")} #{airports[dest].join(" ")}"
                   
+
           end
         end
     else
