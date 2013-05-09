@@ -242,11 +242,11 @@ int main(int argc, const char * argv[])
 
 
     
-    for(double i = 2; i<100; i = i+5){
+    for(double i = 5; i<100; i = i+5){
         std::cout << "Reading file " <<std::endl;
         std::vector<edge> edges = get_edges(filename, i, 10);
         std::vector<edge> copy = get_edges(filename, i, 10);
-        
+        std::cout << edges.size() << std::endl;
         std::cout <<"creating compatabilities" << std::endl;
         cv::Mat_<double> m = create_compatabilities(edges);
         std::cout << "Core algorithm " <<std::endl;
@@ -266,11 +266,11 @@ int main(int argc, const char * argv[])
         draw_and_show_edges(edges,file_name.str());
     }
     
-    for(double i = 112; i<1000; i = i+25){
+    for(double i = 125; i<1000; i = i+25){
         std::cout << "Reading file " <<std::endl;
         std::vector<edge> edges = get_edges(filename, i, 10);
         std::vector<edge> copy = get_edges(filename, i, 10);
-        
+
         std::cout <<"creating compatabilities" << std::endl;
         cv::Mat_<double> m = create_compatabilities(edges);
         std::cout << "Core algorithm " <<std::endl;
